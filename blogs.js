@@ -1,5 +1,20 @@
 export const BLOGS = [
     {
+        "title": "How Do Compuers Work? pt 1",
+        "date": "2026-06-27",
+        "content": `
+            <p>I have created two computers so far, and I think it's a good idea to explain how they work under the hood, as they are quite simple.</p>
+            <h2>ALU and Registers</h2>
+            <sub>Operations and small memory</sub>
+            <p>ALU (Arithmethic-Logical Unit) is designed to do all types of operation (sum, xor, and, etc), usually using registers. Registers are small units of memory. To write at register, usually a operation (like <code>mov</code> or <code>ldi</code>) to save a value, or an operation, as results are saved on registers.</p>
+            <h2>Ports</h2>
+            <sub>Where the coolness begin</sub>
+            <p>I know I'm skipping some parts, but ports are the best part of compuerts. It lets you communicate with other devices (as screen or mouse), making a compuer more than a calculator or a memory changing machine.</p>
+            <p>You can write at ports or read to a register, and making this, you can draw pixels, detect a mouse click, and whatever you want!</p>
+            <p>That's all for first post! If you liked it I will make part 2, with a interactive computer to understand how they work!</p>
+        `
+    },
+    {
         "title": "Hello, World!",
         "date": "2026-06-26",
         "content": `

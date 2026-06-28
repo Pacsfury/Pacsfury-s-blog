@@ -1,5 +1,23 @@
 export const BLOGS = [
     {
+        "title": "Why AI will (not) kill developers",
+        "date": "2026-06-28",
+        "content": `
+            <p>A lot of people is currently claiming that you shouldn't code, because AI can code better and programmers and developers will be no longer needed. In this blog, I will explain you my opinion obout this, and try to convinde you that coding is still worth it.</p>
+            <h2>"AI will code faster and better than most developers"</h2>
+            <p>Maybe AI can create you a "guess the number" game, but AI can't create new software nor ideas. AI is only good at copying. This will make programming encessary, but deleting the necessity to memorize repetitive or standard code blocks, letting programmers create better products.</p>
+            <h2>"With AI, human programming will die"</h2>
+            <p>No it won't. As Microsoft's CEO, Satya Nadella, said "Just as Excel made anyone an analyst, AI makes anyone a developer", saying that AI makes basic creation easier, but also helps creating more difficult applications on real-world projects. He emphatizes that it's important to know how to prompt and know the terminology and logic under the hood to lead to better AI responses, always with the needed human revision.</p>
+            <p>Google's CEO, Sundar Pichai, said "Our engineers are orchestrating fully autonomous digital task forces, firing off agents, and accomplishing incredible things", stating that Google's programmers every time are more AI code revisors and problem-solvers more than typers, making the whole project mroe enjoyable.</p>
+            <p>As we have seen, multiple important people agree that AI won't kill programmers, and just for an example, when Google translator went out, book translators didn't disappear, and when calculators where invented, mathematicians, instead of vanishing, they did better things as no longer had to do calculations themselves.</p>
+            <h2>"Why you should start learning to code today"</h2>
+            <p>If you think that learning to code now is a waste of time, you are completely wrong. Coding is not just about typing lines of code, it is about logic and problem-solving. AI can give you answers, but you need to know what questions to ask. Learning to program today will give you the superpower to control AI instead of being controlled by it.</p>
+            <p>NVIDIA's CEO, Jensen Huang, recently said "We have closed the technology divide. Everyone is a programmer now. You just have to say something to the computer", meaning that the barrier to entry is lower than ever. This doesn't mean developers are useless, it means that you can bring your ideas to life much faster without wasting months learning basic syntax.</p>
+            <h2>Conclusion</h2>
+            <p>In conclusion, AI is not an enemy, it is the best assistant a developer can have. Programmers who use AI will replace programmers who don't. So don't hesitate and start your coding journey today, because the future of software creation is brighter than ever, and humans will always be the ones driving the innovation.</p>
+            `
+    },
+    {
         "title": "How Do Compuers Work? pt 1",
         "date": "2026-06-27",
         "content": `

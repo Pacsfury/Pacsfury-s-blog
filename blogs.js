@@ -1,5 +1,59 @@
 export const BLOGS = [
     {
+        "title": "Releasing first version of Gravel",
+        "date": "2026-07-01",
+        "content": `
+            <h2>The Objective</h2>
+            <p>With Gravel I wanted to make a fast and reliable programming language, while also being
+            clean and powerful. Simple but conscise and consistent syntax all across the language.</p>
+            <p>I wanted Gravel to be my programming language, the one that adapts to me and to everyone,
+            making programming things easier for people.</p>
+            
+            <h2>What Worked</h2>
+            <p>Today I released the first version. A small, but crucial one. The first line can now go 
+            from tokeniation to LLVM.</p>
+            <p>What worked is easy: making LLVM output a single character, using <code>scho</code>. After
+            some debugging, it came out perfectly as expected.</p>
+            <p>Also, you can now use a provisional syntax for creating variables, which will be later 
+            used when Gravel compiles files, not a line.</p>
+            
+            <h2>What Failed</h2>
+            <p>Since first day, Gravel has been challenging. But the level of difficulty increased when 
+            found several bugs during scho implementation.</p>
+            <p>First of all, I didn't do a pull, so some old changes I was being supported by, really 
+            weren't there. This caused bugs such using scho as a name and not as a keyword.</p>
+            <p>After this small incident fixed, I continued the implementation, until I realized that 
+            the character wasn't converted to an integer, which is crucial for LLVM.</p>
+            <p>I didn't know what happened when used wrong syntax, and I tried without knowing. It was 
+            strangely freezing, no output, no "done". I really spent some minutes trying to figure out 
+            was happening there.</p>
+            <p>Also, I found some linker errors, but these were easier as I just needed to close the 
+            terminal.</p>
+            
+            <h2>What Would I Have Changed</h2>
+            <p>From the start, I would now put a better debugging system. This would have avoided me some
+            struggles.</p>
+            <p> would have made better token management, creating TOKEN and KW instead of just 
+            TOKEN.</p>
+            <p>Also, I would have liked to improve errors messages to make creation process more 
+            enjoyable.</p>
+            <p>Not doing changes from Github directly would have really helped me. Also, from the first 
+            moment I would have a dev branch instead of creating it mid development, making creation and 
+            development easier.</p>
+            
+            <h2>What's Coming Now</h2>
+            <p>This is a small roadmap of what I'm plannign to implement on new releases.</p>
+            <p>First, I want the compiler to read a file and tokenize the file instead of having a single
+            <code>tokenize</code> function.</p>
+            <p>I need to make support for actual variables, as the actual syntax is temporal and not the 
+            wanted one.</p>
+            <p>Right now, the LLVM file always has the necessary for executing scho. In next updates I 
+            will make that it's only added once and if and where needed.</p>
+            <p>Finally, next updates will include more features and optimitzations.</p>
+
+        `
+    },
+    {
         "title": "Why AI will (not) kill developers",
         "date": "2026-06-28",
         "content": `

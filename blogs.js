@@ -1,5 +1,40 @@
 export const BLOGS = [
     {
+        "title": "My First Long Text: Why Your Code Is Always Evolving With You",
+        "date": "2026-08-21",
+        "content": `
+
+            <p>I wanted to make soemthing more interesting for the first ever "<b>My Long Text</b>" (whose name was gotten from Ilkka's Long Texts, from Supercell.</p>
+            
+            <p>I first want to talk about how developing software has really been through all this time, as it is really surrounded of both "I made cool things" and "I don't know what to made". You will now undersand better.</p>
+            
+            <h2>"I made cool things" and why it will always be true</h2>
+            
+            <p>When creating software, I will alyars remember when my best repository was CryptoLang or Rubidung. I genuinelly thought I had really cool projects. But later, better and better repositories were coming: NetworkLib, Gravel or QuarkEngine. This didn't only show a personal growth, but it showed how there is always somewhere further to go.</p>
+            
+            <p>But when realizing this, there is a remaining question: is this constant and always true or will the quality level stop somewhere?</p>
+            
+            <p>Well, this question is likely not going to be answered, but I like to think that you and me can always create better software, that sky's the limit, not even our imagination. But that's a single idea, opinion, from me. What do you think?</p>
+            
+            <p>This also creates a kind of addiction to coding and progress, where you thrive to learn more and make more to see what's next, but it's important to note that better programs are born with genuine progress, and not with forced one, as natural things always grow better.</p>
+            
+            <h2>Ideas are finite. Potential isn't</h2>
+            
+            <p>Probably, this topic is relatable to you: you open your computer, the editor or IDE and say to yourself: "what should I do now?".</p>
+            
+            <p>I'm not here to give you a magic solution to you, simply because I neither know it. But, I will talk about whty it's important to not stop coding, stay curious even though when these moments come to life.</p>
+            
+            <p>But first, it's important to know that these moments don't represent an end of ideas. So once you are found like that, close your PC, go to walk, eat, watch TV or jump while playing a pirate violin that's driving a boat. Just disconnect from coding for some time, and ideas are just more likely to come to yourself.</p>
+            
+            <p>Another great trick is <i>using</i> tech instead of creating yours during some time. Doing this, you will more likely see what's missing somewhere and... Boom! You have a fresh project idea to develop during hours, days, or years.</p>
+            
+            <p>So, as you may have seen, your ideas have <i>temporarly</i> got blank, but what did never left, and while you practice and learn more, never will, is your potential to create, modify and update software constantly.</p>
+            
+            <blockquote>This is the first Long Text, that's why it's shorter. But future ones will be longer and better overall: more information and thinking about software and process.</blockquote>
+
+        `
+    },
+    {
         "title": "What I learned with Gravel",
         "date": "2026-07-24",
         "content": `

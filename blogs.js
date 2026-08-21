@@ -30,7 +30,7 @@ export const BLOGS = [
             
             <p>So, as you may have seen, your ideas have <i>temporarly</i> got blank, but what did never left, and while you practice and learn more, never will, is your potential to create, modify and update software constantly.</p>
             
-            <blockquote>This is the first Long Text, that's why it's shorter. But future ones will be longer and better overall: more information and thinking about software and process.</blockquote>
+            <blockquote>This is the first Long Text, that's why it's shorter. But future ones will be longer and better overall: more information and thinking about software and progress.</blockquote>
 
         `
     },

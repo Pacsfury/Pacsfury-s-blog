@@ -72,12 +72,12 @@ export const BLOGS = [
             <p>What worked is easy: making LLVM output a single character, using <code>scho</code>. After
             some debugging, it came out perfectly as expected.</p>
             <p>Also, you can now use a provisional syntax for creating variables, which will be later 
-            used when Gravel compiles files, not a line.</p>
+            used when Gravel compiles files, not a single line.</p>
             
             <h2>What Failed</h2>
             <p>Since the first day, Gravel has been challenging. But the level of difficulty increased when 
             I found several bugs during scho implementation.</p>
-            <p>First of all, I didn't do a pull, so some old changes I was being supported by, really 
+            <p>First of all, I didn't do a <code>git pull</code>, so some old changes I was being supported by, actually 
             weren't there. This caused bugs such as using scho as a name and not as a keyword.</p>
             <p>After this small incident was fixed, I continued the implementation, until I realized that 
             the character wasn't converted to an integer, which is crucial for LLVM.</p>

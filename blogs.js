@@ -4,31 +4,31 @@ export const BLOGS = [
         "date": "2026-08-21",
         "content": `
 
-            <p>I wanted to make soemthing more interesting for the first ever "<b>My Long Text</b>" (whose name was gotten from Ilkka's Long Texts, from Supercell.</p>
+            <p>I wanted to make something more interesting for the first ever "<b>My Long Text</b>" (whose name was inspired by Ilkka's Long Texts from Supercell).</p>
             
-            <p>I first want to talk about how developing software has really been through all this time, as it is really surrounded of both "I made cool things" and "I don't know what to made". You will now undersand better.</p>
+            <p>I first want to talk about how developing software has really been through all this time, as it is really surrounded by both "I made cool things" and "I don't know what to make". You will now understand better.</p>
             
             <h2>"I made cool things" and why it will always be true</h2>
             
-            <p>When creating software, I will alyars remember when my best repository was CryptoLang or Rubidung. I genuinelly thought I had really cool projects. But later, better and better repositories were coming: NetworkLib, Gravel or QuarkEngine. This didn't only show a personal growth, but it showed how there is always somewhere further to go.</p>
+            <p>When creating software, I will always remember when my best repository was CryptoLang or Rubidung. I genuinely thought I had really cool projects. But later, better and better repositories were coming: NetworkLib, Gravel or QuarkEngine. This didn't only show personal growth, but it showed how there is always somewhere further to go.</p>
             
             <p>But when realizing this, there is a remaining question: is this constant and always true or will the quality level stop somewhere?</p>
             
-            <p>Well, this question is likely not going to be answered, but I like to think that you and me can always create better software, that sky's the limit, not even our imagination. But that's a single idea, opinion, from me. What do you think?</p>
+            <p>Well, this question is likely not going to be answered, but I like to think that you and I can always create better software, that sky's the limit, not even our imagination. But that's a single idea, opinion, from me. What do you think?</p>
             
-            <p>This also creates a kind of addiction to coding and progress, where you thrive to learn more and make more to see what's next, but it's important to note that better programs are born with genuine progress, and not with forced one, as natural things always grow better.</p>
+            <p>This also creates a kind of addiction to coding and progress, where you strive to learn more and make more to see what's next, but it's important to note that better programs are born with genuine progress, and not with a forced one, as natural things always grow better.</p>
             
             <h2>Ideas are finite. Potential isn't</h2>
             
             <p>Probably, this topic is relatable to you: you open your computer, the editor or IDE and say to yourself: "what should I do now?".</p>
             
-            <p>I'm not here to give you a magic solution to you, simply because I neither know it. But, I will talk about whty it's important to not stop coding, stay curious even though when these moments come to life.</p>
+            <p>I'm not here to give you a magic solution, simply because I don't know it either. But, I will talk about why it's important to not stop coding, and stay curious even when these moments come to life.</p>
             
-            <p>But first, it's important to know that these moments don't represent an end of ideas. So once you are found like that, close your PC, go to walk, eat, watch TV or jump while playing a pirate violin that's driving a boat. Just disconnect from coding for some time, and ideas are just more likely to come to yourself.</p>
+            <p>But first, it's important to know that these moments don't represent an end of ideas. So once you find yourself like that, close your PC, go for a walk, eat, watch TV or jump while playing a pirate violin that's driving a boat. Just disconnect from coding for some time, and ideas are just more likely to come to you.</p>
             
-            <p>Another great trick is <i>using</i> tech instead of creating yours during some time. Doing this, you will more likely see what's missing somewhere and... Boom! You have a fresh project idea to develop during hours, days, or years.</p>
+            <p>Another great trick is <i>using</i> tech instead of creating your own for some time. Doing this, you will more likely see what's missing somewhere and... Boom! You have a fresh project idea to develop during hours, days, or years.</p>
             
-            <p>So, as you may have seen, your ideas have <i>temporarly</i> got blank, but what did never left, and while you practice and learn more, never will, is your potential to create, modify and update software constantly.</p>
+            <p>So, as you may have seen, your ideas have <i>temporarily</i> gone blank, but what never left, and while you practice and learn more, never will, is your potential to create, modify and update software constantly.</p>
             
             <blockquote>This is the first Long Text, that's why it's shorter. But future ones will be longer and better overall: more information and thinking about software and progress.</blockquote>
 
@@ -41,7 +41,7 @@ export const BLOGS = [
             <p>In the last blog, I talked about how the first Gravel release went. Now, after some new releases, I look back to see what I learned from Gravel.</p>
 
             <h2>About Coding</h2>
-            <p>Coding may be where I have learned the most, as I have learned the base of the C programming language, as well as optimizations and better logic and problem solving.</p>
+            <p>Coding may be where I have learned the most, as I have learned the base of the C programming language, as well as optimizations and better logic and problem-solving.</p>
             <p>But despite all the learning made with C itself, I also continued my path to understanding what is being done under the hood, which gave me a truly useful lesson on not just how programming languages work, but also about how to expand and design them properly.</p>
 
             <h2>About Contributing</h2>
@@ -51,7 +51,7 @@ export const BLOGS = [
             <h2>About Languages</h2>
             <p>For this project, I needed a lot of ideas to come over. I needed to learn from how compilers work internally to how a programming language changes the result's shape.</p>
             <p>For this last reason, I spent a lot of time thinking about what I didn't like about other languages: difficult to add libraries, too slow, too complex... and from all these ideas, the first Gravel prototypes came, and after some days or weeks of writing Gravel on paper, I decided to finally open the editor and code it. But I needed to decide one last thing: what programming language to use.</p>
-            <p>Before Gravel, I made some programming languages, but all of these had the same quirks: were made in Python, so they were slow, they used <code>.startswith</code>, so they were difficult to maintain, and the syntax was hence complex and strange. For these reasons, I decided to use a low level language, while at that moment I was just learning to code in C. So I decided to use that language to learn more about it, as at that moment I had just started with some basic pointer theory.</p>
+            <p>Before Gravel, I made some programming languages, but all of these had the same quirks: were made in Python, so they were slow, they used <code>.startswith</code>, so they were difficult to maintain, and the syntax was hence complex and strange. For these reasons, I decided to use a low-level language, while at that moment I was just learning to code in C. So I decided to use that language to learn more about it, as at that moment I had just started with some basic pointer theory.</p>
             <p>Even though the final product was in C, the first basic prototype I coded was in Python, just to test the syntax.</p>
 
         `
@@ -77,7 +77,7 @@ export const BLOGS = [
             <h2>What Failed</h2>
             <p>Since the first day, Gravel has been challenging. But the level of difficulty increased when 
             I found several bugs during scho implementation.</p>
-            <p>First of all, I didn't do a <code>git pull</code>, so some old changes I was being supported by, actually 
+            <p>First of all, I didn't do a <code>git pull</code>, so some old changes I was relying on actually 
             weren't there. This caused bugs such as using scho as a name and not as a keyword.</p>
             <p>After this small incident was fixed, I continued the implementation, until I realized that 
             the character wasn't converted to an integer, which is crucial for LLVM.</p>
@@ -95,18 +95,18 @@ export const BLOGS = [
             <p>Also, I would have liked to improve error messages to make the creation process more 
             enjoyable.</p>
             <p>Not doing changes from GitHub directly would have really helped me. Also, from the first 
-            moment I would have a dev branch instead of creating it mid development, making creation and 
+            moment I would have a dev branch instead of creating it mid-development, making creation and 
             development easier.</p>
             
             <h2>What's Coming Now</h2>
-            <p>This is a small roadmap of what I'm planning to implement on new releases.</p>
+            <p>This is a small roadmap of what I'm planning to implement in new releases.</p>
             <p>First, I want the compiler to read a file and tokenize the file instead of having a single
             <code>tokenize</code> function.</p>
-            <p>I need to make support for actual variables, as the actual syntax is temporary and not the 
+            <p>I need to add support for actual variables, as the actual syntax is temporary and not the 
             wanted one.</p>
-            <p>Right now, the LLVM file always has what is necessary for executing scho. In next updates I 
+            <p>Right now, the LLVM file always has what is necessary for executing scho. In the next updates I 
             will make it so that it's only added once and if and where needed.</p>
-            <p>Finally, next updates will include more features and optimizations.</p>
+            <p>Finally, future updates will include more features and optimizations.</p>
 
         `
     },
@@ -116,7 +116,7 @@ export const BLOGS = [
         "content": `
             <p>A lot of people are currently claiming that you shouldn't code, because AI can code better and programmers and developers will no longer be needed. In this blog, I will explain to you my opinion about this, and try to convince you that coding is still worth it.</p>
             <h2>"AI will code faster and better than most developers"</h2>
-            <p>Maybe AI can create a "guess the number" game for you, but AI can't create new software nor ideas. AI is only good at copying. This will make programming necessary, but deleting the necessity to memorize repetitive or standard code blocks, letting programmers create better products.</p>
+            <p>Maybe AI can create a "guess the number" game for you, but AI can't create new software nor ideas. AI is only good at copying. This will make programming necessary, but eliminating the necessity to memorize repetitive or standard code blocks, letting programmers create better products.</p>
             <h2>"With AI, human programming will die"</h2>
             <p>No it won't. As Microsoft's CEO, Satya Nadella, said "Just as Excel made anyone an analyst, AI makes anyone a developer", saying that AI makes basic creation easier, but also helps creating more difficult applications on real-world projects. He emphasizes that it's important to know how to prompt and know the terminology and logic under the hood to lead to better AI responses, always with the needed human revision.</p>
             <p>Google's CEO, Sundar Pichai, said "Our engineers are orchestrating fully autonomous digital task forces, firing off agents, and accomplishing incredible things", stating that Google's programmers are increasingly AI code revisors and problem-solvers more than typers, making the whole project more enjoyable.</p>
@@ -138,9 +138,9 @@ export const BLOGS = [
             <p>ALU (Arithmetic-Logic Unit) is designed to do all types of operations (sum, xor, and, etc.), usually using registers. Registers are small units of memory. To write to a register, usually an operation (like <code>mov</code> or <code>ldi</code>) is used to save a value, or perform an operation, as results are saved in registers.</p>
             <h2>Ports</h2>
             <sub>Where the coolness begins</sub>
-            <p>I know I'm skipping some parts, but ports are the best part of computers. They let you communicate with other devices (such as a screen or mouse), making a computer more than a calculator or a memory changing machine.</p>
-            <p>You can write to ports or read to a register, and by doing this, you can draw pixels, detect a mouse click, and whatever you want!</p>
-            <p>That's all for the first post! If you liked it I will make part 2, with an interactive computer to understand how they work!</p>
+            <p>I know I'm skipping some parts, but ports are the best part of computers. They let you communicate with other devices (such as a screen or mouse), making a computer more than a calculator or a memory-changing machine.</p>
+            <p>You can write to ports or read from ports to a register, and by doing this, you can draw pixels, detect a mouse click, and whatever you want!</p>
+            <p>That's all for the first post! If you liked it, I will make part 2, with an interactive computer to understand how they work!</p>
         `
     },
     {

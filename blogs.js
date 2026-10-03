@@ -1,5 +1,100 @@
 export const BLOGS = [
     {
+        "title": "Long Text: The Art Of Always Making Better UI And UX",
+        "date": "2026-10-03",
+        "content": `
+        <p>I decided to make this long text about UI and UX changes because I'm planning on changing the UI of this blog web, just as adding some more features. In this post, I won't talk much about how I want the new UI (I will make another post for that), but I'll talk about why it is so great to make better UIs during the app lifetime, and how UX should not be changed too abruptly.</p>
+        
+        <h2>Why To Change UI</h2>
+        
+        <p>UI is the way users interact with the app. It's the titles, font hierarchy, buttons and design overall. But that's not what UI is only. UI is also what users will remember when they get out of the app. It's what they will remember anytime, if the UI is great and unique.</p>
+        
+        <p>Changing the UI is the process of achieving that incrementally.</p>
+        
+        <p>You start with a simple design. It may not be really unique, but at that moment, the most important thing is the app to work, and users be able to use it easily.</p>
+        
+        <p>After the app is shipped successfully, you probably question the UI. You decide to change it, for making it not only better, but more personal, unique, exciting or more representative.</p>
+        
+        <p>Then, this second step repeats, likely forever, as UI should not be something just static and constant. It should be moving for achieving what it does best: help the users navigate and use the app.</p>
+        
+        <h2>But Changing the UI Is Not Just to Add Some Gradients</h2>
+        
+        <p>Changing the UI is making it adapt to the users and current times. And a good UI is not defined by its rounded corners and gradients. It's to find a good way to make users actually want to use your app.</p>
+        
+        <p>Let me explain myself.</p>
+        
+        <p>If you ask AI to create a single-page web, with a modern design, what it would make would not be really unique or memorable. To demonstrate that, I asked an AI this:</p>
+        
+        <blockquote>
+          Please create a modern, cool, and minimalist web template. The main goal is to establish a solid visual and design foundation to understand the layout and aesthetic direction. Fix any text constraints and focus on contemporary UI practices, clean typography, space distribution, and a highly polished look. Provide a complete, single-file HTML and CSS structure.
+        </blockquote>
+        
+        <iframe
+          src="data:text/html;charset=utf-8,%3C!DOCTYPE%20html%3E%3Chtml%3E%3Chead%3E%3Cmeta%20charset%3D%22utf-8%22%3E%3Cstyle%3E%3ARoot%7B--bg%3A%230a0a0b%3B--surface%3A%23121215%3B--border%3Argb(255%2C255%2C255%2C0.08)%3B--text%3A%23f4f4f6%3B--muted%3A%238e8e9a%7D*%7Bbox-sizing%3Aborder-box%3Bmargin%3A0%3Bpadding%3A0%7Dbody%7Bbackground-color%3Avar(--bg)%3Bcolor%3Avar(--text)%3Bfont-family%3A-apple-system%2CBlinkMacSystemFont%2C'Segoe%20UI'%2CRoboto%2Csans-serif%3Bline-height%3A1.6%3Bpadding%3A2rem%201.5rem%7Dheader%7Bpadding-bottom%3A2rem%3Bborder-bottom%3A1px%20solid%20var(--border)%7D.tag%7Bdisplay%3Ainline-block%3Bpadding%3A0.25rem%200.75rem%3Bbackground%3Avar(--surface)%3Bborder%3A1px%20solid%20var(--border)%3Bborder-radius%3A99px%3Bfont-size%3A0.8125rem%3Bcolor%3Avar(--muted)%3Bmargin-bottom%3A1rem%7Dh1%7Bfont-size%3Aclamp(2rem%2C4vw%2C3rem)%3Bfont-weight%3A600%3Bletter-spacing%3A-0.03em%3Bline-height%3A1.1%3Bmargin-bottom%3A0.75rem%7Dp.hero-text%7Bfont-size%3A1.125rem%3Bcolor%3Avar(--muted)%3Bmax-width%3A600px%7D.grid%7Bdisplay%3Agrid%3Bgrid-template-columns%3Arepeat(auto-fit%2Cminmax(240px%2C1fr))%3Bgap%3A1.25rem%3Bmargin-top%3A2rem%7D.card%7Bbackground%3Avar(--surface)%3Bborder%3A1px%20solid%20var(--border)%3Bborder-radius%3A12px%3Bpadding%3A1.5rem%7D.card%20h2%7Bfont-size%3A1.125rem%3Bfont-weight%3A500%3Bmargin-bottom%3A0.5rem%7D.card%20p%7Bcolor%3Avar(--muted)%3Bfont-size%3A0.9375rem%7Dfooter%7Bmargin-top%3A2.5rem%3Bpadding-top%3A1.5rem%3Bborder-top%3A1px%20solid%20var(--border)%3Bcolor%3Avar(--muted)%3Bfont-size%3A0.8125rem%7D%3C%2Fstyle%3E%3C%2Fhead%3E%3Cbody%3E%3Cheader%3E%3Cspan%20class%3D%22tag%22%3EMinimalist%20Layout%3C%2Fspan%3E%3Ch1%3EClean%20aesthetic%20foundation.%3C%2Fh1%3E%3Cp%20class%3D%22hero-text%22%3EA%20modern%2C%20responsive%20component%20structure%20designed%20with%20focused%20spatial%20distribution%20and%20clean%20typography.%3C%2Fp%3E%3C%2Fheader%3E%3Cmain%20class%3D%22grid%22%3E%3Csection%20class%3D%22card%22%3E%3Ch2%3ETypography%3C%2Fh2%3E%3Cp%3EUses%20native%20system%20font%20stacks%20for%20zero%20layout%20shifts%20and%20high%20visual%20fidelity.%3C%2Fp%3E%3C%2Fsection%3E%3Csection%20class%3D%22card%22%3E%3Ch2%3EStructure%3C%2Fh2%3E%3Cp%3EBuilt%20with%20CSS%20Grid%20and%20flexbox%20layouts%20to%20maintain%20strict%20geometric%20balance%20on%20all%20viewports.%3C%2Fp%3E%3C%2Fsection%3E%3Csection%20class%3D%22card%22%3E%3Ch2%3EPerformance%3C%2Fh2%3E%3Cp%3EZero%20external%20dependencies%20ensures%20rapid%20rendering%20and%20seamless%20compatibility.%3C%2Fp%3E%3C%2Fsection%3E%3C%2Fmain%3E%3Cfooter%3E%3Cp%3E%26copy%3B%202026%20Modern%20Design%20Foundation.%3C%2Fp%3E%3C%2Ffooter%3E%3C%2Fbody%3E%3C%2Fhtml%3E"
+          style="width: 100%; height: 500px; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; display: block;"
+          title="AI Template Demo"
+        ></iframe>
+        
+        <p>As you can see, the design is not something you would actually remember in some time. This is why, if the UI is like that, you are more likely to want to change it in some time, because it's not as clean as AI is telling us.</p>
+        
+        <p>Another example of this is Gradient Fatigue. This is what it's called to put gradients in a lot of elements searching for a modern and clean environment, when actually overstimulating the user's attention. In most webs, keeping a simple, clean and modern interface actually means having one or two colors that actually define the company or product, instead of adding a lot of gradients, smooth animations and rounded corners.</p>
+        
+        <p>In this last example, the UI killer is not the gradients, animations or rounded corners. It's that they are being overused. That is the real problem, as it creates user fatigue when opening the app.</p>
+        
+        <h2>Changing the UX Without Killing Your App</h2>
+        
+        <p>The user experience is what makes the users actually like being in your app. That includes, among other things, having a logical flow for doing most operations.</p>
+        
+        <p>There are several ways of changing the UX, and even more reasons. For example, after a UI remodel, it would be a good moment to change the UX, as users feel a revamped and new way to navigate. The feeling is instant.</p>
+        
+        <p>But if otherwise, you change the UI and then the UX, people may be searching for new or changed functionalities, which will not be there. And some days after, they will likely not realize, unless some big announcement is made, that functions have changed. And that is not always bad, but for bigger changes, I genuinely recommend doing both at the same time.</p>
+        
+        <p>One of the best UX allies is muscle memory. For this reason, big changes should be casual, and most changes should be small, so the user's muscle memory changes slightly instead of suddenly relearning the whole app interface and how it works.</p>
+        
+        <h3>Jakob's Law</h3>
+        
+        <p>This law is apparently simple in hindsight, but hides a complex human psychology in it.</p>
+        
+        <p>It says that users spend more time on other apps, so they expect yours to work like theirs. Instead of reinventing the wheel, sometimes, keeping to the standard will make users spend more time on your app and have a smoother experience altogether.</p>
+        
+        <p>For example, don't make scrolling upwards. People would expect it to be downwards, creating some friction every time they want to use the app.</p>
+        
+        <h3>The Snapchat Effect</h3>
+        
+        <p>In 2018, Snapchat decided to redesign its messy interface with a more ordered and clean feed. It sounded perfect on paper, but they didn't take into account the users' muscle memory.</p>
+        
+        <p>The app lost a lot of money and users, as their users just moved to other apps. Users wanted the original feeling (which some apps, like Reddit, have made with old.reddit.com), but it was already too late for Snapchat. Most people just moved to TikTok and other social media.</p>
+        
+        <h3>How Big Tech Does It</h3>
+        
+        <p>Bigger platforms, like YouTube or Instagram, change the UI and UX in small steps. Today, the bar is red and pink. Today, a new background image, making a seamless integration of changes.</p>
+        
+        <p>Also, these apps usually test bigger changes with a reduced group of people, to ensure it's good to go with that.</p>
+        
+        <h2>How I'm Planning To Redesign This Web</h2>
+        
+        <p>I started the post writing about how I want to redesign this blog website. For doing so, I want to explain how I expect the changes to be, and the result I'll try to get.</p>
+        
+        <p>First thing to take into account: I suck at CSS. I can't help it! I just don't find a great combination and I don't remember how to use certain properties. This is why I won't make the new interface too complex.</p>
+        
+        <h3>The New Interface: UI</h3>
+        
+        <p>I was thinking of making the buttons for entering a post grey, with square corners, and having a solid, same-shape, yellow shadow at the bottom-right, like a kind of pop art button. For the background, a simple, one-colored one, like gray, and maybe a slight pattern, like squares or lines.</p>
+        
+        <h3>The New Interface: UX And New Features</h3>
+        
+        <p>I want to add a simple, but I think powerful feature: tags. Every blog will have tags, some depending on the subject, or the type of blog. Some tags could be Long Text, AI, Gravel... With this, I expect to add a navigation bar for searching by keywords and tags. Also, tags will make organization and recognition better.</p>
+        
+        <p>Another feature that I may add (I don't know yet) is a way to track your readings, through creating an account, and there, you can check your progress on your blogs, and maybe even upvote, downvote and comment on the posts. This feature may never arrive, but it's something I have in mind and I think it would be a really good thing to add.</p>
+        
+        <p>But making people create an account just for saving their progress can be harmful to their experience. That's why if this feature comes to light, I would make the progress be saved in Local Storage. But voting and comments would be restricted to users to avoid bots and spam.</p>
+        
+        <h2>Conclusion: Apps Interfaces Never End</h2>
+        
+        <p>You can change your UI or UX as many times as you want, but it will never be finished. Because as the app's creator, your job is to create a memorable, fashionable, and above all, usable interface for all users. And this task is a never-ending task.</p>
+        `
+    },
+    {
         "title": "My First Long Text: Why Your Code Is Always Evolving With You",
         "date": "2026-08-21",
         "content": `

@@ -145,7 +145,7 @@ const iframeStyles = `
     </style>
 `;
 
-document.addEventListener('DOMContentLoaded', () => {
+function init() {
     const container = document.getElementById('blog-container');
     const searchContainer = document.getElementById('search-container');
 
@@ -313,4 +313,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // see the post's content
         randomPost.click()
     })
-});
+}
+
+if (document.readyState === 'loading') {
+    // DOM hasn't finished parsing yet — the event is still coming
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    // DOM already finished parsing (we arrived late because of the fetch)
+    init();
+}

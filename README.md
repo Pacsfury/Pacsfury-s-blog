@@ -38,3 +38,8 @@ Feel free to make a pull request using this pipeline:
 2. Create a branch (`git checkout feature/cool`)
 3. Push all changes to the branch
 4. Do a pull request to this repository
+
+# Blogger
+
+Blogger is an interface created to make hosting static blogs easier. You can find more information inside `blogger.md`
+

@@ -14,10 +14,10 @@
       "id": "say-hello-to-blogger",
       "title": "Say Hello to Blogger",
       "date": "2026-10-26",
-      "tags": [
+       "tags": [
         "Announcement"
       ],
-      "content": "<p>Goodbye, HTML and JSON \u2014 now we can simply write posts in Markdown!</p>\n<p>This is the first post uploaded using Blogger, and it was uploaded using zero HTML or JSON.\nUnder the hood, it's still HTML and JSON, but the point is that I didn't write it.</p>\n<p>Cheers!</p>"
+      "content": "<p>Goodbye, HTML and JSON \u00e2\u20ac\u201d now we can simply write posts in Markdown!</p>\n<p>This is the first post uploaded using Blogger, and it was uploaded using zero HTML or JSON.</p>\n<p>Under the hood, it's still HTML and JSON, but the point is that I didn't write it.</p>\n<p>The blogger, just as these first two paragraphs have been developed by <strong>Centurion774477</strong>, thanks!</p>\n<p>Now, me, Pacsfury, I want to write a little words about what Blogger actually mean for the blog.</p>\n<h2>Not Just Progress</h2>\n<p>The most immediate feel is progress, which is the reason Blogger was made. But not only this. Blogger demonstrates that when something works, there is always something better that can easily outsmart it. I wrote a blog talking about this, and this feature has just proved it right.</p>\n<h2>Is Blogger Perfect?</h2>\n<p>Short answer: no. Long answer: blogger is good at what it does. But even though this, it has some points that can be upgraded, like editing posts. But the important thing is not if it's perfect, it is if it works. And it clearly does.</p>\n<p>Thanks again to Centurion!</p>"
     },
     {
       "id": "adding-tags",

@@ -271,25 +271,41 @@ document.addEventListener('DOMContentLoaded', () => {
         renderFeed();
     }
 
-    // search for posts
-    document.getElementById('search-button').addEventListener('click', () => {
-        const tagInput = document.getElementById('search-input').value.trim().toLowerCase()
+
+    // the user can either click the button or press enter to search for posts
+    const searchForPosts = (tag) => {
         const posts = [...document.querySelectorAll('#blog-container .blog-post')]
 
         posts.forEach(post => {
             const tagsText = post.querySelector('.blog-tags')?.textContent.toLowerCase() ?? ''
-            const isMatch = tagsText.includes(tagInput)
+            const isMatch = tagsText.includes(tag)
 
             // display posts with a matching tag; hide others
             post.style.display = isMatch ? 'block' : 'none'
         });
+    }
+
+    // search for posts
+    document.getElementById('search-button').addEventListener('click', () => {
+        const tagInput = document.getElementById('search-input').value.trim().toLowerCase()
+        searchForPosts(tagInput)
     });
 
+    // press enter
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            const tagInput = document.getElementById('search-input').value.trim().toLowerCase()
+            searchForPosts(tagInput)
+        }
+    })
+
+    // reset the view after searching
     document.getElementById('reset-view').addEventListener('click', () => {
         document.getElementById('search-input').value = '' // clear text field
         renderFeed() // re-render all posts
     })
 
+    // read a random post
     document.getElementById('random-post').addEventListener('click', () => {
         const posts = [...document.querySelectorAll('#blog-container .blog-post')]
         const randomPost = posts[Math.floor(Math.random() * posts.length)]

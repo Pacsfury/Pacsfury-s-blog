@@ -14,4 +14,5 @@ python blogger.py <markdown file>
 (If you're running macOS or a GNU/Linux distro then you might use `python3` instead of `python`)
 
 Blogger will then ask you two questions and then you'll have a new post uploaded.
+New posts are added to the beginning of the posts array.
 Naturally, if you're using GitHub Pages, you'll still have to commit/push the changes.

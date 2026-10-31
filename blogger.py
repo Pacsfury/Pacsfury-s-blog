@@ -1,4 +1,3 @@
-
 import markdown
 import sys
 import os
@@ -79,7 +78,7 @@ for blog in blogs:
         print("A post with that ID already exists.")
         sys.exit(1)
 
-blogs.append(post)
+blogs.insert(0, post)
 
 # # write
 with open("blogs.json", "w") as f:

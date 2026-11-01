@@ -49,7 +49,7 @@ date = date.today().strftime('%Y-%m-%d')
 post_id = get_id_from_title(given_title)
 content = get_html(given_file)
 tags = tags.split(",")
-tags = [tag.capitalize() for tag in tags]
+tags = [tag.capitalize().strip() for tag in tags]
 
 post = {
     "id": post_id,

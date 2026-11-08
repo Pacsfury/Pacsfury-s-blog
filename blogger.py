@@ -1,21 +1,36 @@
+from idlelib.debugobj import dispatch
+
 import markdown
 import sys
 import os
 from datetime import date
 from pathlib import Path
 import json
+import subprocess
+import tempfile
 
 # guard clauses
 if len(sys.argv) < 2:
     print("No file specified — please specify a file to transpile."); sys.exit(1)
 
 
-def remove_post(post_id):
+def read_blogs():
     with open("blogs.json", "r") as r:
-        blogs_content = json.load(r)
+        return json.load(r)
+
+
+def write_to_blogs(blogs):
+    with open("blogs.json", "w") as w:
+        json.dump(blogs, w, indent=2)
+
+def blogs_has_post(post_id):
+    return any(b["id"] == post_id for b in read_blogs()["blogs"])
+
+def remove_post(post_id):
+    blogs_content = read_blogs()
 
     # ask for confirmation if the post exists
-    if any(b["id"] == post_id for b in blogs_content["blogs"]):
+    if blogs_has_post(post_id):
         confirmation = input(f"Are you sure you want to remove {post_id}? [Y/n] ").lower()
         if confirmation not in ["y", ""]:
             sys.exit(1)
@@ -25,21 +40,60 @@ def remove_post(post_id):
 
     if removed:
         blogs_content["blogs"] = kept
-        with open("blogs.json", "w") as w:
-            json.dump(blogs_content, w, indent=2)
+        write_to_blogs(blogs_content)
         return True
     else:
         return False
 
 
 # blogger remove <post>
-if len(sys.argv) == 3:
+if len(sys.argv) == 3 and sys.argv[1] == "remove":
     if remove_post(sys.argv[2]):
         print("Successfully removed post. Remember to commit your changes!")
         sys.exit(0)
     else:
-        print("No post with that ID exists — consider checking your spelling.")
+        print("No post with that ID exists — "
+              "consider checking your spelling, and remember this searches by ID, not title.")
         sys.exit(1)
+
+if len(sys.argv) == 2 and sys.argv[1] == "remove":
+    print("Please specify a post ID to remove.")
+
+def edit_post(post_id):
+    if not blogs_has_post(post_id):
+        print(f"No post with ID {post_id} exists. Remember that we search by ID, not title.")
+        sys.exit(1)
+
+    blogs_content = read_blogs()
+    target_post = next(b for b in blogs_content["blogs"] if b["id"] == post_id)
+
+    print("Found target post:", target_post)
+
+    original_content = target_post["content"]
+
+    editor = os.environ.get("EDITOR", "nano")  # respect $EDITOR, fall back to nano
+
+    with tempfile.NamedTemporaryFile(suffix=".tmp", mode="w", delete=False) as f:
+        f.write(original_content)
+        tmp_path = f.name
+
+    try:
+        subprocess.run([editor, tmp_path], check=True)
+        with open(tmp_path) as f:
+            new_content = f.read()
+    finally:
+        os.unlink(tmp_path)
+
+    # write new_content to the post and whatnot
+
+    target_post["content"] = new_content
+    write_to_blogs(blogs_content)
+
+
+
+if len(sys.argv) == 3 and sys.argv[1] == "edit":
+    edit_post(sys.argv[2])
+    sys.exit(0)
 
 given_file = sys.argv[1]
 
@@ -98,8 +152,7 @@ print(post)
 # append post to blogs
 
 # read
-with open("blogs.json", "r") as f:
-    blogs_content = json.load(f)
+blogs_content = read_blogs()
 
 # append post to the blogs array
 blogs = blogs_content["blogs"]
@@ -112,10 +165,8 @@ for blog in blogs:
         sys.exit(1)
 
 blogs.insert(0, post)
-
-# # write
-with open("blogs.json", "w") as f:
-    json.dump(blogs_content, f, indent=2)
+# write
+write_to_blogs(blogs_content)
 
 
 print("Successfully uploaded post!"

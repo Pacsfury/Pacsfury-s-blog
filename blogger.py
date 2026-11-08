@@ -1,13 +1,13 @@
-from idlelib.debugobj import dispatch
 
-import markdown
-import sys
+import json
 import os
+import subprocess
+import sys
+import tempfile
 from datetime import date
 from pathlib import Path
-import json
-import subprocess
-import tempfile
+
+import markdown
 
 # guard clauses
 if len(sys.argv) < 2:
@@ -59,6 +59,24 @@ if len(sys.argv) == 3 and sys.argv[1] == "remove":
 if len(sys.argv) == 2 and sys.argv[1] == "remove":
     print("Please specify a post ID to remove.")
 
+
+# opens up a text editor so the user can edit the given text — to be used in edit_post
+def open_in_editor(text):
+    editor = os.environ.get("EDITOR", "nano")  # respect $EDITOR, fall back to nano
+
+    with tempfile.NamedTemporaryFile(suffix=".tmp", mode="w", delete=False) as f:
+        f.write(text)
+        tmp_path = f.name
+
+    try:
+        subprocess.run([editor, tmp_path], check=True)
+        with open(tmp_path) as f:
+            return f.read()
+    finally:
+        os.unlink(tmp_path)
+
+
+# edit the contents of a given post
 def edit_post(post_id):
     if not blogs_has_post(post_id):
         print(f"No post with ID {post_id} exists. Remember that we search by ID, not title.")
@@ -67,28 +85,15 @@ def edit_post(post_id):
     blogs_content = read_blogs()
     target_post = next(b for b in blogs_content["blogs"] if b["id"] == post_id)
 
-    print("Found target post:", target_post)
-
     original_content = target_post["content"]
 
-    editor = os.environ.get("EDITOR", "nano")  # respect $EDITOR, fall back to nano
-
-    with tempfile.NamedTemporaryFile(suffix=".tmp", mode="w", delete=False) as f:
-        f.write(original_content)
-        tmp_path = f.name
-
-    try:
-        subprocess.run([editor, tmp_path], check=True)
-        with open(tmp_path) as f:
-            new_content = f.read()
-    finally:
-        os.unlink(tmp_path)
+    new_content = open_in_editor(original_content)
 
     # write new_content to the post and whatnot
-
     target_post["content"] = new_content
     write_to_blogs(blogs_content)
 
+    print("Successfully edited the post! Remember to commit your changes!")
 
 
 if len(sys.argv) == 3 and sys.argv[1] == "edit":
@@ -112,6 +117,7 @@ if not Path(given_file).suffix == ".md":
     if input("Are you sure? [y/n] ") != "y":
         sys.exit(1)
 
+
 # markdown to html
 def get_html(file):
     return markdown.markdown(open(file).read())
@@ -129,9 +135,10 @@ def get_id_from_title(title):
 
 # gather information
 given_title = input("What would you like to title this post?\n~> ")
-# todo add a way to skip this; attach no tags
+# todo: add a way to skip this; attach no tags
 tags  = input("List the tags you would like to attach, separated by a comma.\n~> ")
 
+# gather or source all data needed for a post
 date = date.today().strftime('%Y-%m-%d')
 post_id = get_id_from_title(given_title)
 content = get_html(given_file)
@@ -146,11 +153,6 @@ post = {
     "content": content
 }
 
-print("Post:")
-print(post)
-
-# append post to blogs
-
 # read
 blogs_content = read_blogs()
 
@@ -158,13 +160,13 @@ blogs_content = read_blogs()
 blogs = blogs_content["blogs"]
 
 # check for a duplicate post
-for blog in blogs:
-    if blog["id"] == post_id:
-        print("Looks like you're trying to upload a duplicate post.")
-        print("A post with that ID already exists.")
-        sys.exit(1)
+if any(b["id"] == post_id for b in blogs):
+    print("Looks like you're trying to upload a duplicate post.")
+    print("A post with that ID already exists.")
+    sys.exit(1)
 
 blogs.insert(0, post)
+
 # write
 write_to_blogs(blogs_content)
 

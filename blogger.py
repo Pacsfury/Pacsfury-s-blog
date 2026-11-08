@@ -9,7 +9,40 @@ import json
 if len(sys.argv) < 2:
     print("No file specified — please specify a file to transpile."); sys.exit(1)
 
+
+def remove_post(post_id):
+    with open("blogs.json", "r") as r:
+        blogs_content = json.load(r)
+
+    # ask for confirmation if the post exists
+    if any(b["id"] == post_id for b in blogs_content["blogs"]):
+        confirmation = input(f"Are you sure you want to remove {post_id}? [Y/n] ").lower()
+        if confirmation not in ["y", ""]:
+            sys.exit(1)
+
+    kept = [b for b in blogs_content["blogs"] if b["id"] != post_id]
+    removed = len(blogs_content["blogs"]) - len(kept)
+
+    if removed:
+        blogs_content["blogs"] = kept
+        with open("blogs.json", "w") as w:
+            json.dump(blogs_content, w, indent=2)
+        return True
+    else:
+        return False
+
+
+# blogger remove <post>
+if len(sys.argv) == 3:
+    if remove_post(sys.argv[2]):
+        print("Successfully removed post. Remember to commit your changes!")
+        sys.exit(0)
+    else:
+        print("No post with that ID exists — consider checking your spelling.")
+        sys.exit(1)
+
 given_file = sys.argv[1]
+
 
 if not os.path.exists(given_file):
     print(f"File {given_file} does not exist."); sys.exit(1)
